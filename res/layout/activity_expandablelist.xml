@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#332b3b"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="#ffffff" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title" >
+
+        <com.example.invis.GroupIndicatorExpandableListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:groupIndicator="@null" />
+
+        <include
+            layout="@layout/activity_expandablelist_group"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>
